@@ -1,28 +1,16 @@
 #include <iostream>
 #include <vector>
 #include <variant>
+#pragma once
 using namespace std;
 
 class Account{
 
 public:
-    vector <variant<int,string>> accounts;
+    Account(string name, string password, double balance);
 
-    Account();
-    int getPassword(){
-        return password;
-    }
-    int getBalance(){
-        return balance;
-    }
-    string getName(){
-        return name;
-    }
-
-private:
     string name;
-    int password;
-    int balance;
-
+    string password;
+    double balance;
 
 };
