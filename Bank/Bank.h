@@ -1,4 +1,3 @@
-#include <string>
 #include <vector>
 #include "account.h"
 using namespace std;
@@ -6,20 +5,18 @@ using namespace std;
 class Bank{
 
 public:
-    Bank( );
-    string find_account(string ,int );
-    bool deposit(string , int ,int );
-    bool withdraw(string , int, int );
-    bool getBalance(string , int ,int);
-    bool createAccount(string ,int );
-    bool deleteAccount(string , int );
-    void printDatabase(string , int , int );
+    Bank();
+    Account find_account(string ,string );
+    bool deposit(string , string );
+    bool withdraw(string , string );
+    double getBalance(string , string);
+    static bool createAccount( );
+    bool deleteAccount(string , string );
+    void printDatabase(string , string );
 
-
-
-private:
-    vector< Account >Accounts;
+    vector< Account > accounts;
 
 };
+
 
 
